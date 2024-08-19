@@ -1,3 +1,28 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+.menu_link {
+  position: relative;
+}
+
+.menu_link::after {
+  content: "";
+  position: absolute;
+  bottom: -8px;
+  left: 0;
+  right: 0;
+  background: #ff6300;
+  height: 2px;
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 0.25s ease-in-out;
+}
+
+.menu_link:hover::after {
+  transform: scaleX(1);
+}
+
+.hero {
+  height: calc(100vh - 88px);
+}
