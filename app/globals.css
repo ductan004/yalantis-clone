@@ -2,6 +2,13 @@
 @tailwind components;
 @tailwind utilities;
 
+@layer utilities {
+  .filter-custom-orange {
+    filter: brightness(0) saturate(100%) invert(48%) sepia(76%) saturate(3770%)
+      hue-rotate(359deg) brightness(102%) contrast(103%);
+  }
+}
+
 .menu_link {
   position: relative;
 }
@@ -24,5 +31,18 @@
 }
 
 .hero {
-  height: calc(100vh - 88px);
+  min-height: calc(100vh - 88px);
+}
+.service-item__text {
+  position: relative;
+}
+.service-item__text::before {
+  content: "";
+  display: block;
+  position: absolute;
+  width: 8px;
+  left: 4px;
+  top: 9px;
+  height: 8px;
+  background-color: #ff6300;
 }
