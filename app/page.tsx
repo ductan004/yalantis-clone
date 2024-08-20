@@ -2,63 +2,66 @@ import Image from "next/image";
 import Button from "./components/Button";
 export default function Home() {
   return (
-    <main className="text-white">
-      <section className="hero pt-[88px] bg-primary-bg font-light flex flex-col justify-center">
-        <div className="container mx-auto px-8">
+    <main className="text-white bg-primary-bg">
+      <section className="hero pt-[88px] font-light flex flex-col justify-center">
+        <div className="container mx-auto px-4 xl:px-8">
           {/* Title Hero */}
-          <h1 className="hero_heading text-[56px] leading-[56px] max-w-[800px]">
+          <h1 className="leading-[56px] max-w-[800px] tracking-wide text-2xl md:text-[46px] xl:text-[56px]">
             <span className="text-primary-color">Software development </span>
             company that delivers for
           </h1>
           {/* Brand Image */}
-          <div className="flex gap-x-[70px] mt-[50px] select-none">
-            <a href="#!">
+          <div className="grid grid-cols-2 mt-[50px] justify-between select-none gap-y-6 md:mt-[80px] md:flex xl:gap-x-[70px] xl:justify-normal xl:mt-[50px]">
+            <a href="#!" className="flex justify-center xl:justify-start">
               <Image
                 src="/hero-1.svg"
                 alt="KPMG"
-                className="hover:grayscale-[100] transition-filter ease-in duration-150"
+                className="h-[34px] md:h-auto hover:grayscale-[100] transition-filter ease-in duration-150"
                 width={124}
                 height={50}
               />
             </a>
-            <a href="#!">
+            <a href="#!" className="flex justify-center xl:justify-start">
               <Image
                 src="/hero-2.svg"
                 alt="Home connect for bosch"
-                className="hover:grayscale-[100] transition-filter ease-in duration-150"
+                className="h-[34px] md:h-auto hover:grayscale-[100] transition-filter ease-in duration-150"
                 width={217}
                 height={50}
               />
             </a>
-            <a href="#!">
+            <a
+              href="#!"
+              className="flex col-span-2 justify-center xl:col-span-1 xl:justify-start"
+            >
               <Image
                 src="/hero-3.svg"
                 alt="ToYoTa"
-                className="hover:grayscale-[100] transition-filter ease-in duration-150"
+                className="h-[34px] md:h-auto hover:grayscale-[100] transition-filter ease-in duration-150"
                 width={336}
                 height={50}
               />
             </a>
           </div>
-          <div>
+          <div className="flex justify-center xl:block">
             <Button
               href="#!"
-              className="bg-primary-color text-white hover:opacity-90 mt-28 font-medium"
+              className="bg-primary-color text-white hover:opacity-90 mt-28 font-medium w-full sm:w-auto py-3 px-14 xl:px-7"
               text="CONTACT US"
             ></Button>
           </div>
         </div>
       </section>
 
-      <section className="services bg-primary-bg pt-[35px] pb-20">
-        <div className="container mx-auto px-8">
-          <ul className="service-list grid grid-cols-4 gap-3">
+      <section className="services  pt-[35px] pb-20">
+        <div className="container mx-auto px-4 xl:px-8">
+          <ul className="service-list grid md:grid-cols-2 xl:grid-cols-4 gap-4 xl:gap-3">
             {/* Service Item 1 */}
-            <li className="relative group border border-[#494b50] pt-8 pr-6 pb-7 pl-6 hover:-translate-y-6 transition-transform duration-300 hover:bg-gradient-overlay overflow-hidden">
+            <li className="relative group border border-[#494b50] pt-8 pr-6 pb-7 pl-6 transition-transform duration-300 overflow-hidden xl:hover:-translate-y-6 xl:hover:bg-gradient-overlay">
               <div className="block h-full">
                 <a href="#!" className="flex flex-col">
-                  <div className="absolute top-[120px] h-56 max-h-full left-0 right-0 blur-[80px] rounded-[50%] bg-primary-color invisible opacity-0 group-hover:opacity-[0.18] group-hover:visible transition-opacity duration-300 ease-in-out"></div>
-                  <h3 className="max-w-[224px] font-medium leading-6 tracking-wide">
+                  <div className="absolute top-[120px] h-56 max-h-full left-0 right-0 blur-[80px] rounded-[50%] bg-primary-color invisible opacity-0 xl:group-hover:opacity-[0.18] xl:group-hover:visible transition-opacity duration-300 ease-in-out"></div>
+                  <h3 className="font-medium leading-6 tracking-wide md:max-w-[224px]">
                     Custom software development
                   </h3>
                   <ul className="service-item__list mt-6 text-[#d2d2d3] text-sm flex flex-col gap-5">
@@ -93,24 +96,24 @@ export default function Home() {
                       </p>
                     </li>
                   </ul>
-                  <span className="service-link flex gap-2 pt-[38px] leading-6 uppercase tracking-widest group-hover:text-primary-color group-hover:gap-[17px] transition-all duration-300">
+                  <span className="flex gap-2 mt-auto pt-[34px] text-primary-color leading-6 uppercase tracking-widest xl:text-white xl:group-hover:text-primary-color xl:group-hover:gap-[17px] transition-all duration-300">
                     Read more
                     <Image
                       src="/white-arrow.svg"
                       alt="arrow-right"
                       width={24}
                       height={24}
-                      className="group-hover:filter-custom-orange"
+                      className="filter-custom-orange xl:filter-custom-white xl:group-hover:filter-custom-orange"
                     />
                   </span>
                 </a>
               </div>
             </li>
-            <li className="relative group border border-[#494b50] pt-8 pr-6 pb-7 pl-6 hover:-translate-y-6 transition-transform duration-300 hover:bg-gradient-overlay overflow-hidden">
+            <li className="relative group border border-[#494b50] pt-8 pr-6 pb-7 pl-6 transition-transform duration-300 overflow-hidden xl:hover:-translate-y-6 xl:hover:bg-gradient-overlay">
               <div className="flex h-full">
                 <a href="#!" className="flex flex-col">
-                  <div className="absolute top-[120px] h-56 max-h-full left-0 right-0 blur-[80px] rounded-[50%] bg-primary-color invisible opacity-0 group-hover:opacity-[0.18] group-hover:visible transition-opacity duration-300 ease-in-out"></div>
-                  <h3 className="max-w-[224px] font-medium leading-6 tracking-wide">
+                  <div className="absolute top-[120px] h-56 max-h-full left-0 right-0 blur-[80px] rounded-[50%] bg-primary-color invisible opacity-0 xl:group-hover:opacity-[0.18] xl:group-hover:visible transition-opacity duration-300 ease-in-out"></div>
+                  <h3 className="md:max-w-[224px] font-medium leading-6 tracking-wide">
                     Development team augmentation
                   </h3>
                   <ul className="service-item__list mt-6 text-[#d2d2d3] text-sm flex flex-col gap-5">
@@ -140,24 +143,24 @@ export default function Home() {
                       </p>
                     </li>
                   </ul>
-                  <span className="flex gap-2 mt-auto leading-6 uppercase tracking-widest group-hover:text-primary-color group-hover:gap-[17px] transition-all duration-300">
+                  <span className="flex gap-2 mt-auto pt-[34px] text-primary-color leading-6 uppercase tracking-widest xl:text-white xl:group-hover:text-primary-color xl:group-hover:gap-[17px] transition-all duration-300">
                     Read more
                     <Image
                       src="/white-arrow.svg"
                       alt="arrow-right"
                       width={24}
                       height={24}
-                      className="group-hover:filter-custom-orange"
+                      className="filter-custom-orange xl:filter-custom-white xl:group-hover:filter-custom-orange"
                     />
                   </span>
                 </a>
               </div>
             </li>
-            <li className="relative group border border-[#494b50] pt-8 pr-6 pb-7 pl-6 hover:-translate-y-6 transition-transform duration-300 hover:bg-gradient-overlay overflow-hidden">
+            <li className="relative group border border-[#494b50] pt-8 pr-6 pb-7 pl-6 transition-transform duration-300 overflow-hidden xl:hover:-translate-y-6 xl:hover:bg-gradient-overlay">
               <div className="flex h-full">
                 <a href="#!" className="flex flex-col">
-                  <div className="absolute top-[120px] h-56 max-h-full left-0 right-0 blur-[80px] rounded-[50%] bg-primary-color invisible opacity-0 group-hover:opacity-[0.18] group-hover:visible transition-opacity duration-300 ease-in-out"></div>
-                  <h3 className="max-w-[224px] font-medium leading-6 tracking-wide">
+                  <div className="absolute top-[120px] h-56 max-h-full left-0 right-0 blur-[80px] rounded-[50%] bg-primary-color invisible opacity-0 xl:group-hover:opacity-[0.18] xl:group-hover:visible transition-opacity duration-300 ease-in-out"></div>
+                  <h3 className="md:max-w-[224px] font-medium leading-6 tracking-wide">
                     IT consulting and digital advisory
                   </h3>
                   <ul className="service-item__list mt-6 text-[#d2d2d3] text-sm flex flex-col gap-5">
@@ -195,24 +198,24 @@ export default function Home() {
                       </p>
                     </li>
                   </ul>
-                  <span className="service-link flex gap-2 pt-[38px] leading-6 uppercase tracking-widest group-hover:text-primary-color group-hover:gap-[17px] transition-all duration-300">
+                  <span className="flex gap-2 mt-auto pt-[34px] text-primary-color leading-6 uppercase tracking-widest xl:text-white xl:group-hover:text-primary-color xl:group-hover:gap-[17px] transition-all duration-300">
                     Read more
                     <Image
                       src="/white-arrow.svg"
                       alt="arrow-right"
                       width={24}
                       height={24}
-                      className="group-hover:filter-custom-orange"
+                      className="filter-custom-orange xl:filter-custom-white xl:group-hover:filter-custom-orange"
                     />
                   </span>
                 </a>
               </div>
             </li>
-            <li className="relative group border border-[#494b50] pt-8 pr-6 pb-7 pl-6 hover:-translate-y-6 transition-transform duration-300 hover:bg-gradient-overlay overflow-hidden">
+            <li className="relative group border border-[#494b50] pt-8 pr-6 pb-7 pl-6 transition-transform duration-300 overflow-hidden xl:hover:-translate-y-6 xl:hover:bg-gradient-overlay">
               <div className="flex h-full">
                 <a href="#!" className="flex flex-col">
-                  <div className="absolute top-[120px] h-56 max-h-full left-0 right-0 blur-[80px] rounded-[50%] bg-primary-color invisible opacity-0 group-hover:opacity-[0.18] group-hover:visible transition-opacity duration-300 ease-in-out"></div>
-                  <h3 className="max-w-[224px] font-medium leading-6 tracking-wide">
+                  <div className="absolute top-[120px] h-56 max-h-full left-0 right-0 blur-[80px] rounded-[50%] bg-primary-color invisible opacity-0 xl:group-hover:opacity-[0.18] xl:group-hover:visible transition-opacity duration-300 ease-in-out"></div>
+                  <h3 className="md:max-w-[224px] font-medium leading-6 tracking-wide">
                     Digital transformation
                   </h3>
                   <ul className="service-item__list mt-6 text-[#d2d2d3] text-sm flex flex-col gap-5">
@@ -242,14 +245,14 @@ export default function Home() {
                       </p>
                     </li>
                   </ul>
-                  <span className="flex gap-2 mt-auto leading-6 uppercase tracking-widest group-hover:text-primary-color group-hover:gap-[17px] transition-all duration-300">
+                  <span className="flex gap-2 mt-auto pt-[34px] text-primary-color leading-6 uppercase tracking-widest xl:text-white xl:group-hover:text-primary-color xl:group-hover:gap-[17px] transition-all duration-300">
                     Read more
                     <Image
                       src="/white-arrow.svg"
                       alt="arrow-right"
                       width={24}
                       height={24}
-                      className="group-hover:filter-custom-orange"
+                      className="filter-custom-orange xl:filter-custom-white xl:group-hover:filter-custom-orange"
                     />
                   </span>
                 </a>

@@ -7,6 +7,11 @@
     filter: brightness(0) saturate(100%) invert(48%) sepia(76%) saturate(3770%)
       hue-rotate(359deg) brightness(102%) contrast(103%);
   }
+
+  .filter-custom-white {
+    filter: brightness(0) saturate(100%) invert(99%) sepia(2%) saturate(12%)
+      hue-rotate(120deg) brightness(104%) contrast(100%);
+  }
 }
 
 .menu_link {
@@ -33,6 +38,7 @@
 .hero {
   min-height: 100vh;
 }
+
 .service-item__text {
   position: relative;
 }
