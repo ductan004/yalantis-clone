@@ -3,7 +3,7 @@ import Button from "./components/Button";
 export default function Home() {
   return (
     <main className="text-white">
-      <section className="hero bg-primary-bg py-[35px] font-light flex flex-col justify-center">
+      <section className="hero pt-[88px] bg-primary-bg font-light flex flex-col justify-center">
         <div className="container mx-auto px-8">
           {/* Title Hero */}
           <h1 className="hero_heading text-[56px] leading-[56px] max-w-[800px]">
@@ -50,7 +50,7 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="services bg-primary-bg pt-0 pb-20">
+      <section className="services bg-primary-bg pt-[35px] pb-20">
         <div className="container mx-auto px-8">
           <ul className="service-list grid grid-cols-4 gap-3">
             {/* Service Item 1 */}

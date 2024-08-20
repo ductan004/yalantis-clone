@@ -3,7 +3,7 @@ import Button from "./Button";
 
 const Header = () => {
   return (
-    <header className="header bg-primary-bg">
+    <header className="fixed top-0 left-0 right-0 bg-primary-bg">
       <div className="container mx-auto px-8">
         <div className="flex h-[88px] items-center">
           {/* Logo */}
