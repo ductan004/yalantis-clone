@@ -55,18 +55,14 @@ const VideoReviews = () => {
       <div className="md:gap-8 xl:gap-14 relative pr-0 lg:pr-28 xl:pr-36">
         <Swiper
           spaceBetween={30} // Space between slides
-          slidesPerView={3} // Number of slides visible in the viewport
-          slidesPerGroup={3} // Number of slides to slide at a time
+          slidesPerView={1} // Number of slides visible in the viewport
+          slidesPerGroup={1} // Number of slides to slide at a time
           loop={true}
           navigation={{
             nextEl: ".video-button-next",
             prevEl: ".video-button-prev",
           }}
           breakpoints={{
-            640: {
-              slidesPerView: 1,
-              slidesPerGroup: 1,
-            },
             1024: {
               slidesPerView: 2,
               slidesPerGroup: 2,
@@ -81,7 +77,7 @@ const VideoReviews = () => {
         >
           {reviews.map((review, index) => (
             <SwiperSlide key={index}>
-              <div className="review-item">
+              <div className="review-item select-none">
                 <a href="#!" className="group review-item__img--wrap relative">
                   <Image
                     src={review.image}
