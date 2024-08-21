@@ -55,7 +55,7 @@ export default function Home() {
       </section>
 
       {/* Services */}
-      <section className="services  py-[40px] md:py-[60px] lg:pb-[80px] lg:pt-0">
+      <section className="services py-[40px] md:py-[60px] lg:pb-[80px] lg:pt-0">
         <div className="container mx-auto px-4 xl:px-8">
           <ul className="service-list grid md:grid-cols-2 xl:grid-cols-4 gap-4 xl:gap-3">
             {/* Service Item 1 */}
@@ -264,7 +264,496 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="video-reviews"></section>
+      {/* Video Reivews */}
+      <section className="video-review py-20">
+        <div className="container mx-auto px-4 xl:px-8">
+          <h2 className="text-[24px] md:text-[46px] leading-[64px] font-light tracking-wide">
+            Video testimonials
+          </h2>
+          <div className="flex items-center md:gap-8 xl:gap-14">
+            <div className="overflow-hidden">
+              <ul className="review-list flex flex-nowrap gap-4 mt-[30px] md:mr-8">
+                {/* Review Item */}
+                <li className="review-item w-full md:w-1/2 xl:w-1/3 shrink-0">
+                  {/* Review Item Img */}
+                  <a
+                    href="#!"
+                    className="group review-item__img--wrap relative"
+                  >
+                    <Image
+                      src="/preview-01.webp"
+                      alt="Simon Jones"
+                      width={336}
+                      height={336}
+                      className="w-full"
+                    />
+                    <div className="review-item__info--play flex gap-4 absolute left-5 bottom-4">
+                      <div className="flex justify-center items-center w-12 h-12 rounded-[50%] bg-white">
+                        <Image
+                          src="/play.svg"
+                          alt="Simon Jones"
+                          className="group-hover:filter-custom-orange"
+                          width={14}
+                          height={9}
+                        />
+                      </div>
+                      <div>
+                        <h4 className="review-item__title text-xl font-medium leading-7">
+                          Simon Jones
+                        </h4>
+                        <p className="reivew-item__desc--person mt-1 text-[#d8d8d8] font-medium tracking-wider">
+                          CIO in Healthcare
+                        </p>
+                      </div>
+                    </div>
+                  </a>
+                  {/* Review Item Text - Desc */}
+                  <div className="reivew-item__text mt-5 px-4 opacity-80">
+                    <p className="review-item__desc leading-6">
+                      Yalantis has been a great fit for us because of their
+                      experience, responsiveness, value, and time to market.
+                      From the very start, they’ve been able to staff an
+                      effective development team in no time and perform as
+                      expected.
+                    </p>
+                  </div>
+                </li>
+                <li className="review-item w-full md:w-1/2 xl:w-1/3 shrink-0">
+                  {/* Review Item Img */}
+                  <a
+                    href="#!"
+                    className="group review-item__img--wrap relative"
+                  >
+                    <Image
+                      src="/preview-01.webp"
+                      alt="Simon Jones"
+                      width={336}
+                      height={336}
+                      className="w-full"
+                    />
+                    <div className="review-item__info--play flex gap-4 absolute left-5 bottom-4">
+                      <div className="flex justify-center items-center w-12 h-12 rounded-[50%] bg-white">
+                        <Image
+                          src="/play.svg"
+                          alt="Simon Jones"
+                          className="group-hover:filter-custom-orange"
+                          width={14}
+                          height={9}
+                        />
+                      </div>
+                      <div>
+                        <h4 className="review-item__title text-xl font-medium leading-7">
+                          Simon Jones
+                        </h4>
+                        <p className="reivew-item__desc--person mt-1 text-[#d8d8d8] font-medium tracking-wider">
+                          CIO in Healthcare
+                        </p>
+                      </div>
+                    </div>
+                  </a>
+                  {/* Review Item Text - Desc */}
+                  <div className="reivew-item__text mt-5 px-4 opacity-80">
+                    <p className="review-item__desc leading-6">
+                      Yalantis has been a great fit for us because of their
+                      experience, responsiveness, value, and time to market.
+                      From the very start, they’ve been able to staff an
+                      effective development team in no time and perform as
+                      expected.
+                    </p>
+                  </div>
+                </li>
+                <li className="review-item w-full md:w-1/2 xl:w-1/3 shrink-0">
+                  {/* Review Item Img */}
+                  <a
+                    href="#!"
+                    className="group review-item__img--wrap relative"
+                  >
+                    <Image
+                      src="/preview-01.webp"
+                      alt="Simon Jones"
+                      width={336}
+                      height={336}
+                      className="w-full"
+                    />
+                    <div className="review-item__info--play flex gap-4 absolute left-5 bottom-4">
+                      <div className="flex justify-center items-center w-12 h-12 rounded-[50%] bg-white">
+                        <Image
+                          src="/play.svg"
+                          alt="Simon Jones"
+                          className="group-hover:filter-custom-orange"
+                          width={14}
+                          height={9}
+                        />
+                      </div>
+                      <div>
+                        <h4 className="review-item__title text-xl font-medium leading-7">
+                          Simon Jones
+                        </h4>
+                        <p className="reivew-item__desc--person mt-1 text-[#d8d8d8] font-medium tracking-wider">
+                          CIO in Healthcare
+                        </p>
+                      </div>
+                    </div>
+                  </a>
+                  {/* Review Item Text - Desc */}
+                  <div className="reivew-item__text mt-5 px-4 opacity-80">
+                    <p className="review-item__desc leading-6">
+                      Yalantis has been a great fit for us because of their
+                      experience, responsiveness, value, and time to market.
+                      From the very start, they’ve been able to staff an
+                      effective development team in no time and perform as
+                      expected.
+                    </p>
+                  </div>
+                </li>
+                <li className="review-item w-full md:w-1/2 xl:w-1/3 shrink-0">
+                  {/* Review Item Img */}
+                  <a
+                    href="#!"
+                    className="group review-item__img--wrap relative"
+                  >
+                    <Image
+                      src="/preview-01.webp"
+                      alt="Simon Jones"
+                      width={336}
+                      height={336}
+                      className="w-full"
+                    />
+                    <div className="review-item__info--play flex gap-4 absolute left-5 bottom-4">
+                      <div className="flex justify-center items-center w-12 h-12 rounded-[50%] bg-white">
+                        <Image
+                          src="/play.svg"
+                          alt="Simon Jones"
+                          className="group-hover:filter-custom-orange"
+                          width={14}
+                          height={9}
+                        />
+                      </div>
+                      <div>
+                        <h4 className="review-item__title text-xl font-medium leading-7">
+                          Simon Jones
+                        </h4>
+                        <p className="reivew-item__desc--person mt-1 text-[#d8d8d8] font-medium tracking-wider">
+                          CIO in Healthcare
+                        </p>
+                      </div>
+                    </div>
+                  </a>
+                  {/* Review Item Text - Desc */}
+                  <div className="reivew-item__text mt-5 px-4 opacity-80">
+                    <p className="review-item__desc leading-6">
+                      Yalantis has been a great fit for us because of their
+                      experience, responsiveness, value, and time to market.
+                      From the very start, they’ve been able to staff an
+                      effective development team in no time and perform as
+                      expected.
+                    </p>
+                  </div>
+                </li>
+                <li className="review-item w-full md:w-1/2 xl:w-1/3 shrink-0">
+                  {/* Review Item Img */}
+                  <a
+                    href="#!"
+                    className="group review-item__img--wrap relative"
+                  >
+                    <Image
+                      src="/preview-01.webp"
+                      alt="Simon Jones"
+                      width={336}
+                      height={336}
+                      className="w-full"
+                    />
+                    <div className="review-item__info--play flex gap-4 absolute left-5 bottom-4">
+                      <div className="flex justify-center items-center w-12 h-12 rounded-[50%] bg-white">
+                        <Image
+                          src="/play.svg"
+                          alt="Simon Jones"
+                          className="group-hover:filter-custom-orange"
+                          width={14}
+                          height={9}
+                        />
+                      </div>
+                      <div>
+                        <h4 className="review-item__title text-xl font-medium leading-7">
+                          Simon Jones
+                        </h4>
+                        <p className="reivew-item__desc--person mt-1 text-[#d8d8d8] font-medium tracking-wider">
+                          CIO in Healthcare
+                        </p>
+                      </div>
+                    </div>
+                  </a>
+                  {/* Review Item Text - Desc */}
+                  <div className="reivew-item__text mt-5 px-4 opacity-80">
+                    <p className="review-item__desc leading-6">
+                      Yalantis has been a great fit for us because of their
+                      experience, responsiveness, value, and time to market.
+                      From the very start, they’ve been able to staff an
+                      effective development team in no time and perform as
+                      expected.
+                    </p>
+                  </div>
+                </li>
+                <li className="review-item w-full md:w-1/2 xl:w-1/3 shrink-0">
+                  {/* Review Item Img */}
+                  <a
+                    href="#!"
+                    className="group review-item__img--wrap relative"
+                  >
+                    <Image
+                      src="/preview-01.webp"
+                      alt="Simon Jones"
+                      width={336}
+                      height={336}
+                      className="w-full"
+                    />
+                    <div className="review-item__info--play flex gap-4 absolute left-5 bottom-4">
+                      <div className="flex justify-center items-center w-12 h-12 rounded-[50%] bg-white">
+                        <Image
+                          src="/play.svg"
+                          alt="Simon Jones"
+                          className="group-hover:filter-custom-orange"
+                          width={14}
+                          height={9}
+                        />
+                      </div>
+                      <div>
+                        <h4 className="review-item__title text-xl font-medium leading-7">
+                          Simon Jones
+                        </h4>
+                        <p className="reivew-item__desc--person mt-1 text-[#d8d8d8] font-medium tracking-wider">
+                          CIO in Healthcare
+                        </p>
+                      </div>
+                    </div>
+                  </a>
+                  {/* Review Item Text - Desc */}
+                  <div className="reivew-item__text mt-5 px-4 opacity-80">
+                    <p className="review-item__desc leading-6">
+                      Yalantis has been a great fit for us because of their
+                      experience, responsiveness, value, and time to market.
+                      From the very start, they’ve been able to staff an
+                      effective development team in no time and perform as
+                      expected.
+                    </p>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div className="review-controls hidden md:block">
+              <div className="flex flex-col gap-6">
+                <div className="flex group justify-center opacity-40 items-center w-16 h-16 rounded-[50%] border-2 bg-transparent cursor-pointer hover:border-primary-color hover:opacity-100">
+                  <Image
+                    src="/video-arrow.svg"
+                    alt=""
+                    className="group-hover:filter-custom-orange"
+                    width={13}
+                    height={7}
+                  />
+                </div>
+                <div className="flex group justify-center opacity-40 items-center w-16 h-16 rounded-[50%] border-2 bg-transparent cursor-pointer hover:border-primary-color hover:opacity-100">
+                  <Image
+                    src="/video-arrow.svg"
+                    alt=""
+                    className="group-hover:filter-custom-orange rotate-180"
+                    width={13}
+                    height={7}
+                  />
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* About us */}
+      <section className="about bg-white text-[#1c1e24] pt-[85px] pb-[70px]">
+        <div className="container mx-auto px-4 xl:px-8">
+          <h2 className="about__heading text-[54px] leading-[64px] font-light tracking-wide">
+            <span className="text-primary-color">About </span>
+            us
+          </h2>
+          <div className="about-content--wrap flex flex-col md:mt-3 gap-[43px] xl:gap-[35px] xl:flex-row xl:mt-5">
+            <div className="about-content basis-2/3">
+              <p className="about-desc text-xl leading-tight font-light">
+                Since 2008, Yalantis has been helping companies in the FinTech,
+                healthcare, real estate, supply chain management, and other
+                industries succeed with custom software solutions. Driven by our
+                clients’ business-specific needs and time and budget
+                constraints, our software development company builds and
+                augments secure, stable, scalable, and highly functional digital
+                products to deliver maximum value and ensure business
+                sustainability.
+              </p>
+              <ul className="about-list flex flex-col xl:flex-row gap-[52px] mt-[45px]">
+                <li className="about-item">
+                  <p className="about-item__title text-[50px] text-primary-color leading-[56px] font-light">
+                    15+
+                  </p>
+                  <p className="about-item__desc mt-[5px] leading-tight text-[#77787c]">
+                    years of experience in software engineering and IT
+                    consulting
+                  </p>
+                </li>
+                <li className="about-item">
+                  <p className="about-item__title text-[50px] text-primary-color leading-[56px] font-light">
+                    500+
+                  </p>
+                  <p className="about-item__desc mt-[5px] leading-tight text-[#77787c]">
+                    software developers and other IT professionals on board
+                  </p>
+                </li>
+                <li className="about-item">
+                  <p className="about-item__title text-[50px] text-primary-color leading-[56px] font-light">
+                    35+
+                  </p>
+                  <p className="about-item__desc mt-[5px] leading-tight text-[#77787c]">
+                    active clients building and augmenting software with us
+                  </p>
+                </li>
+              </ul>
+            </div>
+            <div className="about-office basis-1/3 px-8 py-6 bg-[#fafafa]">
+              <h3 className="office__title text-[#77787c] text-xl tracking-wider">
+                Our Offices
+              </h3>
+              <ul className="office-list grid sm:grid-cols-1 md:grid-cols-2 xl:grid-cols-1 gap-8 mt-4">
+                <li className="flex items-start gap-x-4">
+                  <Image
+                    src="/poland.svg"
+                    alt="Poland"
+                    className=""
+                    width={24}
+                    height={16}
+                  />
+                  <div>
+                    <p className="office-country text-xl leading-6">Poland</p>
+                    <p className="office-text text-[#77787c] mt-[2px]">
+                      123 al. Jerozolimskie, Warsaw, 00-001
+                    </p>
+                  </div>
+                </li>
+                <li className="flex items-start gap-x-4">
+                  <Image
+                    src="/ukraine.svg"
+                    alt="Ukraine"
+                    className=""
+                    width={24}
+                    height={16}
+                  />
+                  <div>
+                    <p className="office-country office-country text-xl leading-6">
+                      Ukraine
+                    </p>
+                    <p className="office-text text-[#77787c] mt-[2px]">
+                      12 Vasylya Stusa street, Lviv, 79000
+                    </p>
+                  </div>
+                </li>
+                <li className="flex items-start gap-x-4">
+                  <Image
+                    src="/cyprus.svg"
+                    alt="Cyprus"
+                    className=""
+                    width={24}
+                    height={16}
+                  />
+                  <div>
+                    <p className="office-country office-country office-country text-xl leading-6">
+                      Cyprus
+                    </p>
+                    <p className="office-text office-text text-[#77787c] mt-[2px]">
+                      8 Athinon Street, Larnaca, 6023
+                    </p>
+                  </div>
+                </li>
+                <li className="flex items-start gap-x-4">
+                  <Image
+                    src="/Estonia.svg"
+                    alt="Estonia"
+                    className=""
+                    width={24}
+                    height={16}
+                  />
+                  <div>
+                    <p className="office-country office-country office-country office-country text-xl leading-6">
+                      Estonia
+                    </p>
+                    <p className="office-text office-text office-text text-[#77787c] mt-[2px]">
+                      12 Parda, Tallinn, 10151
+                    </p>
+                  </div>
+                </li>
+              </ul>
+            </div>
+          </div>
+          <ul className="about-logo-list grid grid-cols-4 xl:grid-cols-7 mt-[25px]">
+            <li>
+              <Image
+                src="/iso_27701_2019.svg"
+                alt="iso"
+                className=""
+                width={120}
+                height={120}
+              />
+            </li>
+            <li>
+              <Image
+                src="/iso_27701_2019.svg"
+                alt="iso"
+                className=""
+                width={120}
+                height={120}
+              />
+            </li>
+            <li>
+              <Image
+                src="/iso_27701_2019.svg"
+                alt="iso"
+                className=""
+                width={120}
+                height={120}
+              />
+            </li>
+            <li>
+              <Image
+                src="/aws_partner_logo_white-1.svg"
+                alt="iso"
+                className=""
+                width={120}
+                height={120}
+              />
+            </li>
+            <li>
+              <Image
+                src="/clutch_staff_augmentation_company_ukr-1.svg"
+                alt="iso"
+                className=""
+                width={120}
+                height={120}
+              />
+            </li>
+            <li>
+              <Image
+                src="/top-software-development-companies-3.svg"
+                alt="iso"
+                className=""
+                width={120}
+                height={120}
+              />
+            </li>
+            <li>
+              <Image
+                src="/superbcompanies.com-original-3.svg"
+                alt="iso"
+                className=""
+                width={120}
+                height={120}
+              />
+            </li>
+          </ul>
+        </div>
+      </section>
     </main>
   );
 }

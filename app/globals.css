@@ -52,3 +52,22 @@
   height: 8px;
   background-color: #ff6300;
 }
+
+.review-item__desc {
+  position: relative;
+}
+
+.review-item__desc::before {
+  content: '"';
+  display: inline-block;
+  position: absolute;
+  top: -6px;
+  left: -16px;
+  font-size: 33.6px;
+  line-height: 42px;
+  opacity: 0.8;
+}
+
+/* .review-item {
+  width: calc(33.33% - 16px);
+} */
