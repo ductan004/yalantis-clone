@@ -669,7 +669,7 @@ export default function Home() {
                 </li>
                 <li className="flex items-start gap-x-4">
                   <Image
-                    src="/Estonia.svg"
+                    src="/estonia.svg"
                     alt="Estonia"
                     className=""
                     width={24}
