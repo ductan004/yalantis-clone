@@ -2,6 +2,7 @@ import Image from "next/image";
 import Button from "./components/Button";
 import VideoReviews from "./components/VideoReviews";
 import CaseStudies from "./components/CaseStudies";
+import FAQ from "./components/FAQ";
 
 export default function Home() {
   return (
@@ -466,6 +467,7 @@ export default function Home() {
         </div>
       </section>
 
+      {/* Case-Studies */}
       <section className="case-studies pt-[70px]">
         <div className="container mx-auto px-4 xl:px-8">
           <div className="flex justify-between items-center lg:text-[56px] leading-[64px] font-light tracking-wide">
@@ -515,6 +517,16 @@ export default function Home() {
               ></Button>
             </div>
           </div>
+        </div>
+      </section>
+
+      {/* Faq */}
+      <section className="faq bg-[#f5f5f5] text-[#1c1e24] pt-[91px] pb-[80px]">
+        <div className="container mx-auto px-4 xl:px-8">
+          <h2 className="faq__heading uppercase text-center text-[56px] leading-[64px] font-light tracking-wide">
+            faq
+          </h2>
+          <FAQ></FAQ>
         </div>
       </section>
     </main>
