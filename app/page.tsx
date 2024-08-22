@@ -1,6 +1,7 @@
 import Image from "next/image";
 import Button from "./components/Button";
 import VideoReviews from "./components/VideoReviews";
+import CaseStudies from "./components/CaseStudies";
 
 export default function Home() {
   return (
@@ -268,7 +269,12 @@ export default function Home() {
 
       {/* Video Reivews */}
       <section className="video-review py-20">
-        <VideoReviews></VideoReviews>
+        <div className="container mx-auto px-4 xl:px-8">
+          <h2 className="text-[24px] md:text-[46px] leading-[64px] font-light tracking-wide">
+            Video testimonials
+          </h2>
+          <VideoReviews></VideoReviews>
+        </div>
       </section>
 
       {/* About us */}
@@ -457,6 +463,58 @@ export default function Home() {
               />
             </li>
           </ul>
+        </div>
+      </section>
+
+      <section className="case-studies pt-[70px]">
+        <div className="container mx-auto px-4 xl:px-8">
+          <div className="flex justify-between items-center lg:text-[56px] leading-[64px] font-light tracking-wide">
+            <h2 className="text-[24px] md:text-[46px] leading-[64px] font-light tracking-wide">
+              Case studies
+            </h2>
+            <div className="review-controls hidden lg:block">
+              <div className="flex flex-row gap-6 select-none">
+                <div className="case-prev flex group justify-center opacity-40 items-center w-16 h-16 rounded-[50%] border-2 bg-transparent cursor-pointer hover:border-primary-color hover:opacity-100">
+                  <Image
+                    src="/video-arrow.svg"
+                    alt=""
+                    className="group-hover:filter-custom-orange"
+                    width={13}
+                    height={7}
+                  />
+                </div>
+                <div className="case-next flex group justify-center opacity-40 items-center w-16 h-16 rounded-[50%] border-2 bg-transparent cursor-pointer hover:border-primary-color hover:opacity-100">
+                  <Image
+                    src="/video-arrow.svg"
+                    alt=""
+                    className="group-hover:filter-custom-orange rotate-180"
+                    width={13}
+                    height={7}
+                  />
+                </div>
+              </div>
+            </div>
+          </div>
+          <CaseStudies></CaseStudies>
+          <div className="case-cta pb-20 mt-10 ">
+            <div className="case-bg py-10 pl-10 pr-6 flex justify-between items-center flex-col text-center gap-[22px] lg:flex-row lg:text-left">
+              <div>
+                <h3 className="case-cta__title text-xl max-w-[757px] tracking-wider uppercase">
+                  LOOKING FOR A RELIABLE SOFTWARE DEVELOPMENT COMPANY?
+                </h3>
+                <p className="case-cta__desc mt-[6px] max-w-[670px] font-light">
+                  Build a high-quality FinTech product designed for seamless
+                  scaling, active user acquisition, and stable performance under
+                  high loads with Yalantis
+                </p>
+              </div>
+              <Button
+                href="#!"
+                text="Book a call"
+                className="uppercase"
+              ></Button>
+            </div>
+          </div>
         </div>
       </section>
     </main>

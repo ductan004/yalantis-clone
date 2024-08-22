@@ -68,6 +68,17 @@
   opacity: 0.8;
 }
 
+.case-bg {
+  background-image: url("/case-bg.svg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.case-list {
+  display: grid !important;
+}
+
 /* .review-item {
   width: calc(33.33% - 16px);
 } */

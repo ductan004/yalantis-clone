@@ -48,94 +48,89 @@ const VideoReviews = () => {
   ];
 
   return (
-    <div className="container mx-auto px-4 xl:px-8">
-      <h2 className="text-[24px] md:text-[46px] leading-[64px] font-light tracking-wide">
-        Video testimonials
-      </h2>
-      <div className="md:gap-8 xl:gap-14 relative pr-0 lg:pr-28 xl:pr-36">
-        <Swiper
-          spaceBetween={30} // Space between slides
-          slidesPerView={1} // Number of slides visible in the viewport
-          slidesPerGroup={1} // Number of slides to slide at a time
-          loop={true}
-          navigation={{
-            nextEl: ".video-button-next",
-            prevEl: ".video-button-prev",
-          }}
-          breakpoints={{
-            1024: {
-              slidesPerView: 2,
-              slidesPerGroup: 2,
-            },
-            1280: {
-              slidesPerView: 3,
-              slidesPerGroup: 3,
-            },
-          }}
-          modules={[Navigation]}
-          className="review-list mt-[30px] md:mr-8"
-        >
-          {reviews.map((review, index) => (
-            <SwiperSlide key={index}>
-              <div className="review-item select-none">
-                <a href="#!" className="group review-item__img--wrap relative">
-                  <Image
-                    src={review.image}
-                    alt={review.name}
-                    width={336}
-                    height={336}
-                    className="w-full"
-                  />
-                  <div className="review-item__info--play flex gap-4 absolute left-5 bottom-4">
-                    <div className="flex justify-center items-center w-12 h-12 rounded-[50%] bg-white">
-                      <Image
-                        src="/play.svg"
-                        alt="Play"
-                        className="group-hover:filter-custom-orange"
-                        width={14}
-                        height={9}
-                      />
-                    </div>
-                    <div>
-                      <h4 className="review-item__title text-xl font-medium leading-7">
-                        {review.name}
-                      </h4>
-                      <p className="review-item__desc--person mt-1 text-[#d8d8d8] font-medium tracking-wider">
-                        {review.role}
-                      </p>
-                    </div>
+    <div className="md:gap-8 xl:gap-14 relative pr-0 lg:pr-28 xl:pr-36">
+      <Swiper
+        spaceBetween={30} // Space between slides
+        slidesPerView={1} // Number of slides visible in the viewport
+        slidesPerGroup={1} // Number of slides to slide at a time
+        loop={true}
+        navigation={{
+          nextEl: ".video-button-next",
+          prevEl: ".video-button-prev",
+        }}
+        breakpoints={{
+          1024: {
+            slidesPerView: 2,
+            slidesPerGroup: 2,
+          },
+          1280: {
+            slidesPerView: 3,
+            slidesPerGroup: 3,
+          },
+        }}
+        modules={[Navigation]}
+        className="review-list mt-[30px] md:mr-8"
+      >
+        {reviews.map((review, index) => (
+          <SwiperSlide key={index}>
+            <div className="review-item select-none">
+              <a href="#!" className="group review-item__img--wrap relative">
+                <Image
+                  src={review.image}
+                  alt={review.name}
+                  width={336}
+                  height={336}
+                  className="w-full"
+                />
+                <div className="review-item__info--play flex gap-4 absolute left-5 bottom-4">
+                  <div className="flex justify-center items-center w-12 h-12 rounded-[50%] bg-white">
+                    <Image
+                      src="/play.svg"
+                      alt="Play"
+                      className="group-hover:filter-custom-orange"
+                      width={14}
+                      height={9}
+                    />
                   </div>
-                </a>
-                <div className="review-item__text mt-5 px-4 opacity-80">
-                  <p className="review-item__desc leading-6">
-                    {review.description}
-                  </p>
+                  <div>
+                    <h4 className="review-item__title text-xl font-medium leading-7">
+                      {review.name}
+                    </h4>
+                    <p className="review-item__desc--person mt-1 text-[#d8d8d8] font-medium tracking-wider">
+                      {review.role}
+                    </p>
+                  </div>
                 </div>
+              </a>
+              <div className="review-item__text mt-5 px-4 opacity-80">
+                <p className="review-item__desc leading-6">
+                  {review.description}
+                </p>
               </div>
-            </SwiperSlide>
-          ))}
-        </Swiper>
-        <div className="absolute top-1/2 right-0 transform -translate-y-1/2">
-          <div className="review-controls hidden lg:block">
-            <div className="flex flex-col gap-6 select-none">
-              <div className="video-button-prev flex group justify-center opacity-40 items-center w-16 h-16 rounded-[50%] border-2 bg-transparent cursor-pointer hover:border-primary-color hover:opacity-100">
-                <Image
-                  src="/video-arrow.svg"
-                  alt=""
-                  className="group-hover:filter-custom-orange"
-                  width={13}
-                  height={7}
-                />
-              </div>
-              <div className="video-button-next flex group justify-center opacity-40 items-center w-16 h-16 rounded-[50%] border-2 bg-transparent cursor-pointer hover:border-primary-color hover:opacity-100">
-                <Image
-                  src="/video-arrow.svg"
-                  alt=""
-                  className="group-hover:filter-custom-orange rotate-180"
-                  width={13}
-                  height={7}
-                />
-              </div>
+            </div>
+          </SwiperSlide>
+        ))}
+      </Swiper>
+      <div className="absolute top-1/2 right-0 transform -translate-y-1/2">
+        <div className="review-controls hidden lg:block">
+          <div className="flex flex-col gap-6 select-none">
+            <div className="video-button-prev flex group justify-center opacity-40 items-center w-16 h-16 rounded-[50%] border-2 bg-transparent cursor-pointer hover:border-primary-color hover:opacity-100">
+              <Image
+                src="/video-arrow.svg"
+                alt=""
+                className="group-hover:filter-custom-orange"
+                width={13}
+                height={7}
+              />
+            </div>
+            <div className="video-button-next flex group justify-center opacity-40 items-center w-16 h-16 rounded-[50%] border-2 bg-transparent cursor-pointer hover:border-primary-color hover:opacity-100">
+              <Image
+                src="/video-arrow.svg"
+                alt=""
+                className="group-hover:filter-custom-orange rotate-180"
+                width={13}
+                height={7}
+              />
             </div>
           </div>
         </div>
