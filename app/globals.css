@@ -82,3 +82,19 @@
 /* .review-item {
   width: calc(33.33% - 16px);
 } */
+
+/* Custom styles for Swiper pagination */
+
+.progressbar-pagination {
+  position: relative;
+  height: 4px;
+  background-color: rgba(0, 0, 0, 0.2);
+  border-radius: 2px;
+  overflow: hidden;
+}
+
+.progressbar-fill {
+  height: 100%;
+  background-color: white; /* Customize fill color */
+  transition: width 0.3s ease;
+}

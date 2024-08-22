@@ -1,7 +1,7 @@
-"use client";
+"use client"; // Ensure this component runs on the client-side
 
 import { Swiper, SwiperSlide } from "swiper/react";
-import { Navigation } from "swiper/modules";
+import { Navigation, Pagination } from "swiper/modules";
 import "swiper/css";
 import "swiper/css/navigation";
 import Image from "next/image";
@@ -89,75 +89,92 @@ const CaseStudies = () => {
   ];
 
   return (
-    <Swiper
-      spaceBetween={0}
-      slidesPerView={1}
-      slidesPerGroup={1} // Number of slides to slide at a time
-      navigation={{
-        nextEl: ".case-next",
-        prevEl: ".case-prev",
-      }}
-      breakpoints={{
-        1024: {
-          slidesPerView: 2,
-        },
-        1280: {
-          slidesPerView: 4,
-        },
-      }}
-      modules={[Navigation]}
-      className="case-list mt-10 pb-20 "
-    >
-      {caseList.map((study, index) => (
-        <SwiperSlide key={index}>
-          <div className="group border border-[#494b50] py-11 px-8 relative cursor-pointer h-full">
-            <div
-              className={`absolute ${study.bgColor} opacity-0 inset-0 lg:group-hover:opacity-100 transition-opacity duration-300 z-[1]`}
-            ></div>
-            <div className="h-full">
-              <a href="#!" className="flex flex-col h-full">
-                <h3 className="text-[26px] leading-tight relative z-10 min-h-28">
-                  {study.title}
-                </h3>
-                <ul className="flex flex-col gap-3 mt-16 lg:mt-[85px] text-[#d2d2d3] text-xl leading-tight opacity-80">
-                  {study.items.map((item, i) => (
-                    <li key={i}>
-                      <p className="service-item__text pl-8">{item}</p>
-                    </li>
-                  ))}
-                </ul>
-                <div className="case-studies__image--wrap opacity-0 lg:group-hover:opacity-100 transition-opacity duration-300 absolute top-44 z-10">
-                  <Image
-                    src={study.smallImg}
-                    alt=""
-                    width={143}
-                    height={45}
-                    className="case-studies__image--small"
-                  />
-                  <Image
-                    src={study.largeImg}
-                    alt=""
-                    width={315}
-                    height={239}
-                    className="case-studies__image--large relative top-3 left-3"
-                  />
+    <div>
+      <div className="swiper-paginationCase mt-4 lg:hidden"></div>
+      <Swiper
+        spaceBetween={0}
+        slidesPerView={1}
+        slidesPerGroup={1} // Number of slides to slide at a time
+        navigation={{
+          nextEl: ".case-next",
+          prevEl: ".case-prev",
+        }}
+        pagination={{
+          el: ".swiper-paginationCase",
+          type: "custom",
+          clickable: true,
+          renderCustom: (swiper, current, total) => {
+            const progress = (current / total) * 100;
+            return `
+                <div class="fraction-pagination">${current}/${total}</div>
+                <div class="progressbar-pagination mt-3">
+                  <div class="progressbar-fill" style="width:${progress}%"></div>
                 </div>
-                <span className="flex gap-6 mt-auto pt-[34px] leading-6 uppercase tracking-widest text-white relative z-10">
-                  See full case study
-                  <Image
-                    src="/white-arrow.svg"
-                    alt="arrow-right"
-                    width={24}
-                    height={24}
-                    className="filter-custom-orange transition-all duration-300 rotate-45 group-hover:-rotate-45 group-hover:filter-custom-white"
-                  />
-                </span>
-              </a>
+              `;
+          },
+        }}
+        breakpoints={{
+          1024: {
+            slidesPerView: 2,
+          },
+          1280: {
+            slidesPerView: 4,
+          },
+        }}
+        modules={[Navigation, Pagination]}
+        className="case-list mt-10 pb-20 "
+      >
+        {caseList.map((study, index) => (
+          <SwiperSlide key={index}>
+            <div className="group border border-[#494b50] py-11 px-8 relative cursor-pointer h-full">
+              <div
+                className={`absolute ${study.bgColor} opacity-0 inset-0 lg:group-hover:opacity-100 transition-opacity duration-300 z-[1]`}
+              ></div>
+              <div className="h-full">
+                <a href="#!" className="flex flex-col h-full">
+                  <h3 className="text-[26px] leading-tight relative z-10 min-h-28">
+                    {study.title}
+                  </h3>
+                  <ul className="flex flex-col gap-3 mt-16 lg:mt-[85px] text-[#d2d2d3] text-xl leading-tight opacity-80">
+                    {study.items.map((item, i) => (
+                      <li key={i}>
+                        <p className="service-item__text pl-8">{item}</p>
+                      </li>
+                    ))}
+                  </ul>
+                  <div className="case-studies__image--wrap opacity-0 lg:group-hover:opacity-100 transition-opacity duration-300 absolute top-44 z-10">
+                    <Image
+                      src={study.smallImg}
+                      alt=""
+                      width={143}
+                      height={45}
+                      className="case-studies__image--small"
+                    />
+                    <Image
+                      src={study.largeImg}
+                      alt=""
+                      width={315}
+                      height={239}
+                      className="case-studies__image--large relative top-3 left-3"
+                    />
+                  </div>
+                  <span className="flex gap-6 mt-auto pt-[34px] leading-6 uppercase tracking-widest text-white relative z-10">
+                    See full case study
+                    <Image
+                      src="/white-arrow.svg"
+                      alt="arrow-right"
+                      width={24}
+                      height={24}
+                      className="filter-custom-orange transition-all duration-300 rotate-45 group-hover:-rotate-45 group-hover:filter-custom-white"
+                    />
+                  </span>
+                </a>
+              </div>
             </div>
-          </div>
-        </SwiperSlide>
-      ))}
-    </Swiper>
+          </SwiperSlide>
+        ))}
+      </Swiper>
+    </div>
   );
 };
 

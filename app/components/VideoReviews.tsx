@@ -1,7 +1,7 @@
 "use client"; // Ensure this component runs on the client-side
 
 import { Swiper, SwiperSlide } from "swiper/react";
-import { Navigation } from "swiper/modules";
+import { Navigation, Pagination } from "swiper/modules";
 import "swiper/css";
 import "swiper/css/navigation";
 import Image from "next/image";
@@ -49,6 +49,7 @@ const VideoReviews = () => {
 
   return (
     <div className="md:gap-8 xl:gap-14 relative pr-0 lg:pr-28 xl:pr-36">
+      <div className="swiper-pagination mt-4 lg:hidden"></div>
       <Swiper
         spaceBetween={30} // Space between slides
         slidesPerView={1} // Number of slides visible in the viewport
@@ -57,6 +58,20 @@ const VideoReviews = () => {
         navigation={{
           nextEl: ".video-button-next",
           prevEl: ".video-button-prev",
+        }}
+        pagination={{
+          el: ".swiper-pagination",
+          type: "custom",
+          clickable: true,
+          renderCustom: (swiper, current, total) => {
+            const progress = (current / total) * 100;
+            return `
+                <div class="fraction-pagination">${current}/${total}</div>
+                <div class="progressbar-pagination mt-3">
+                  <div class="progressbar-fill" style="width:${progress}%"></div>
+                </div>
+              `;
+          },
         }}
         breakpoints={{
           1024: {
@@ -68,7 +83,7 @@ const VideoReviews = () => {
             slidesPerGroup: 3,
           },
         }}
-        modules={[Navigation]}
+        modules={[Navigation, Pagination]}
         className="review-list mt-[30px] md:mr-8"
       >
         {reviews.map((review, index) => (
