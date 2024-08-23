@@ -23,6 +23,9 @@ module.exports = {
         filter: "filter",
         gap: "gap",
       },
+      boxShadow: {
+        location: "2px 10px 18px rgba(0,0,0,.12)",
+      },
     },
   },
   plugins: [],

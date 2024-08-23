@@ -12,9 +12,9 @@ const Header = () => {
               <Image
                 src="/logo_white.svg"
                 alt="Yalantis logo"
-                className="header-logo__img"
-                width={86}
-                height={20}
+                className="header-logo__img w-[86px] h-[20px]"
+                width={0}
+                height={0}
               />
             </a>
           </div>
