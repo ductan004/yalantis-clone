@@ -5,6 +5,7 @@ import { Navigation, Pagination } from "swiper/modules";
 import "swiper/css";
 import "swiper/css/navigation";
 import Image from "next/image";
+import React, { useState } from "react";
 
 const VideoReviews = () => {
   const reviews = [
@@ -47,10 +48,27 @@ const VideoReviews = () => {
     // Repeat for other reviews...
   ];
 
+  const [currentSlide, setCurrentSlide] = useState(0);
+  const [totalSlides, setTotalSlides] = useState(0);
+
   return (
     <div className="md:gap-8 xl:gap-14 relative pr-0 lg:pr-28 xl:pr-36">
-      <div className="swiper-pagination mt-4 lg:hidden"></div>
+      {/* <div className="swiper-pagination mt-4 lg:hidden"></div> */}
+      <p>
+        {currentSlide + 1} / {totalSlides}
+      </p>
+      <div className="flex items-center justify-center mt-[11px] w-full lg:hidden">
+        <div className="swiper-pagination-customize flex items-center justify-center w-full"></div>
+      </div>
+
       <Swiper
+        onInit={(swiper) => {
+          setTotalSlides(swiper.slides.length); // Get total slides
+          setCurrentSlide(swiper.realIndex); // Get current slide index
+        }}
+        onSlideChange={(swiper) => {
+          setCurrentSlide(swiper.realIndex); // Update current slide index on change
+        }}
         spaceBetween={30} // Space between slides
         slidesPerView={1} // Number of slides visible in the viewport
         slidesPerGroup={1} // Number of slides to slide at a time
@@ -60,17 +78,10 @@ const VideoReviews = () => {
           prevEl: ".video-button-prev",
         }}
         pagination={{
-          el: ".swiper-pagination",
-          type: "custom",
           clickable: true,
-          renderCustom: (swiper, current, total) => {
-            const progress = (current / total) * 100;
-            return `
-                <div class="fraction-pagination">${current}/${total}</div>
-                <div class="progressbar-pagination mt-3">
-                  <div class="progressbar-fill" style="width:${progress}%"></div>
-                </div>
-              `;
+          el: ".swiper-pagination-customize",
+          renderBullet: function (index, className) {
+            return '<span class="' + className + '">' + "</span>";
           },
         }}
         breakpoints={{

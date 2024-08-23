@@ -5,6 +5,7 @@ import { Navigation, Pagination } from "swiper/modules";
 import "swiper/css";
 import "swiper/css/navigation";
 import Image from "next/image";
+import React, { useState } from "react";
 
 const CaseStudies = () => {
   const caseList = [
@@ -88,10 +89,26 @@ const CaseStudies = () => {
     },
   ];
 
+  const [currentSlide, setCurrentSlide] = useState(0);
+  const [totalSlides, setTotalSlides] = useState(0);
+
   return (
     <div>
-      <div className="swiper-paginationCase mt-4 lg:hidden"></div>
+      <p>
+        {currentSlide + 1} / {totalSlides}
+      </p>
+      {/* <div className="swiper-paginationCase mt-4 lg:hidden"></div> */}
+      <div className="flex items-center justify-center mt-[11px] w-full lg:hidden">
+        <div className="swiper-pagination-customize1 flex items-center justify-center w-full"></div>
+      </div>
       <Swiper
+        onInit={(swiper) => {
+          setTotalSlides(swiper.slides.length); // Get total slides
+          setCurrentSlide(swiper.realIndex); // Get current slide index
+        }}
+        onSlideChange={(swiper) => {
+          setCurrentSlide(swiper.realIndex); // Update current slide index on change
+        }}
         spaceBetween={0}
         slidesPerView={1}
         slidesPerGroup={1} // Number of slides to slide at a time
@@ -100,17 +117,10 @@ const CaseStudies = () => {
           prevEl: ".case-prev",
         }}
         pagination={{
-          el: ".swiper-paginationCase",
-          type: "custom",
           clickable: true,
-          renderCustom: (swiper, current, total) => {
-            const progress = (current / total) * 100;
-            return `
-                <div class="fraction-pagination">${current}/${total}</div>
-                <div class="progressbar-pagination mt-3">
-                  <div class="progressbar-fill" style="width:${progress}%"></div>
-                </div>
-              `;
+          el: ".swiper-pagination-customize1",
+          renderBullet: function (index, className) {
+            return '<span class="' + className + '">' + "</span>";
           },
         }}
         breakpoints={{
