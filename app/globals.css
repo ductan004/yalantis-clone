@@ -14,13 +14,6 @@
   }
 }
 
-@layer base {
-  img {
-    width: auto;
-    height: auto;
-  }
-}
-
 .menu_link {
   position: relative;
 }
@@ -38,7 +31,11 @@
   transition: transform 0.25s ease-in-out;
 }
 
-.menu_link:hover::after {
+/* .menu_link:hover::after {
+  transform: scaleX(1);
+} */
+
+.menu-item:hover .menu_link::after {
   transform: scaleX(1);
 }
 
@@ -113,7 +110,7 @@
   background-size: auto;
 }
 
-@media (min-width: 1280) {
+@media (min-width: 1280px) {
   .contact {
     background-position: bottom;
     background-size: cover;

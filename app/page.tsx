@@ -531,7 +531,7 @@ export default function Home() {
       </section>
 
       {/* contact-us*/}
-      <section className="contact pt-[60px] pb-28 xl:pt-[80px]">
+      <section className="contact pt-[60px] pb-32 xl:pb-0 xl:pt-[80px]">
         <div className="container mx-auto px-4 xl:px-8">
           <div className="grid xl:grid-cols-2 gap-8">
             <div className="contact-form p-8 bg-white text-[#1c1e24]">
