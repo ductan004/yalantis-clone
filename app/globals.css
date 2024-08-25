@@ -119,3 +119,13 @@ span.swiper-pagination-bullet-active {
     background-size: cover;
   }
 }
+
+.menuList {
+  max-height: calc(100vh - 175px);
+  overflow-y: auto;
+  overflow-x: hidden;
+}
+
+.menu-wrap {
+  height: calc(100vh - 95px);
+}

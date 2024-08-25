@@ -1,7 +1,18 @@
+"use client"; // Ensure this component runs on the client-side
+
 import Image from "next/image";
 import Button from "./Button";
+import { useState } from "react";
+import Nav from "./Nav";
+import MenuList from "./MenuList";
 
 const Header = () => {
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
+
+  const toggleMenu = () => {
+    setIsMenuOpen(!isMenuOpen);
+  };
+
   return (
     <header className="fixed top-0 left-0 right-0 z-50 bg-primary-bg">
       <div className="container mx-auto px-4 xl:px-8 lg:px-4">
@@ -19,740 +30,172 @@ const Header = () => {
             </a>
           </div>
           {/* Menu */}
-          <nav className="mr-auto">
-            <ul className="hidden xl:flex text-white text-base">
-              <li className="group leading-[88px] menu-item px-[10px]">
-                <a
-                  href="#!"
-                  className="menu_link whitespace-nowrap group-hover:text-primary-color"
-                >
-                  SERVICES
-                </a>
-                {/* SubMenu */}
-                <div className="sub-menu py-7 absolute hidden group-hover:block border-t-[1px] border-[#494b50] top-[88px] left-0 right-0 bg-[#202227]">
-                  <div className="container mx-auto px-4 xl:px-8 lg:px-4">
-                    {/*SubmenuItem */}
-                    <div>
-                      <ul className="header-list flex justify-center gap-2">
-                        <li className="group/item bg-[#292b30] py-4 px-6 leading-none basis-1/5">
-                          <div className="h-full flex flex-col">
-                            <p className="font-medium">
-                              Custom software development
-                            </p>
-                            <p className="text-sm mt-5 text-[#a4a5a7]">
-                              Tailored software solutions and software
-                              augmentation services to meet unique business
-                              needs, drive operational efficiency, and stimulate
-                              business expansion
-                            </p>
-                            <span
-                              className="flex gap-2 mt-auto pt-[34px] text-primary-color leading-6 tracking-wide 
-                           xl:group-hover/item:text-primary-color xl:group-hover/item:gap-[17px] transition-all duration-300"
-                            >
-                              Read more
-                              <Image
-                                src="/white-arrow.svg"
-                                alt="arrow-right"
-                                width={24}
-                                height={24}
-                                className="filter-custom-orange"
-                              />
-                            </span>
-                          </div>
-                        </li>
-                        <li className="group/item bg-[#292b30] py-4 px-6 leading-none basis-1/5">
-                          <div className="h-full flex flex-col">
-                            <p className="font-medium">
-                              Dedicated development teams
-                            </p>
-                            <p className="text-sm mt-5 text-[#a4a5a7]">
-                              Dedicated development teams and professionals that
-                              work exclusively on your project and ensure
-                              top-notch tailored solutions
-                            </p>
-                            <span
-                              className="flex gap-2 mt-auto pt-[34px] text-primary-color leading-6 tracking-wide 
-                           xl:group-hover/item:text-primary-color xl:group-hover/item:gap-[17px] transition-all duration-300"
-                            >
-                              Read more
-                              <Image
-                                src="/white-arrow.svg"
-                                alt="arrow-right"
-                                width={24}
-                                height={24}
-                                className="filter-custom-orange"
-                              />
-                            </span>
-                          </div>
-                        </li>
-                        <li className="group/item bg-[#292b30] py-4 px-6 leading-none basis-1/5">
-                          <div className="h-full flex flex-col">
-                            <p className="font-medium">IT consulting</p>
-                            <p className="text-sm mt-5 text-[#a4a5a7]">
-                              Expert guidance on leveraging advanced
-                              technologies to optimize business processes, drive
-                              innovation, and achieve strategic objectives
-                            </p>
-                            <span
-                              className="flex gap-2 mt-auto pt-[34px] text-primary-color leading-6 tracking-wide 
-                           xl:group-hover/item:text-primary-color xl:group-hover/item:gap-[17px] transition-all duration-300"
-                            >
-                              Read more
-                              <Image
-                                src="/white-arrow.svg"
-                                alt="arrow-right"
-                                width={24}
-                                height={24}
-                                className="filter-custom-orange"
-                              />
-                            </span>
-                          </div>
-                        </li>
-                        <li className="group/item bg-[#292b30] py-4 px-6 leading-none basis-1/5">
-                          <div className="h-full flex flex-col">
-                            <p className="font-medium">
-                              Digital transformation
-                            </p>
-                            <p className="text-sm mt-5 text-[#a4a5a7]">
-                              Digital transformation services for streamlined
-                              business processes, improved customer experiences,
-                              and enhanced operational efficiency
-                            </p>
-                            <span
-                              className="flex gap-2 mt-auto pt-[34px] text-primary-color leading-6 tracking-wide 
-                           xl:group-hover/item:text-primary-color xl:group-hover/item:gap-[17px] transition-all duration-300"
-                            >
-                              Read more
-                              <Image
-                                src="/white-arrow.svg"
-                                alt="arrow-right"
-                                width={24}
-                                height={24}
-                                className="filter-custom-orange"
-                              />
-                            </span>
-                          </div>
-                        </li>
-                        <li className="group/item bg-[#292b30] py-4 px-6 leading-none basis-1/5">
-                          <div className="h-full flex flex-col">
-                            <p className="font-medium">IT consulting</p>
-                            <p className="text-sm mt-5 text-[#a4a5a7]">
-                              Expert guidance on leveraging advanced
-                              technologies to optimize business processes, drive
-                              innovation, and achieve strategic objectives
-                            </p>
-                            <span
-                              className="flex gap-2 mt-auto pt-[34px] text-primary-color leading-6 tracking-wide 
-                           xl:group-hover/item:text-primary-color xl:group-hover/item:gap-[17px] transition-all duration-300"
-                            >
-                              Read more
-                              <Image
-                                src="/white-arrow.svg"
-                                alt="arrow-right"
-                                width={24}
-                                height={24}
-                                className="filter-custom-orange"
-                              />
-                            </span>
-                          </div>
-                        </li>
-                      </ul>
-                    </div>
-                  </div>
-                </div>
-              </li>
-
-              <li className="group leading-[88px] menu-item px-[10px]">
-                <a
-                  href="#!"
-                  className="menu_link whitespace-nowrap group-hover:text-primary-color"
-                >
-                  EXPERTISE
-                </a>
-                {/* SubMenu */}
-                <div className="sub-menu py-7 absolute hidden group-hover:block border-t-[1px] border-[#494b50] top-[88px] left-0 right-0 bg-[#202227]">
-                  <div className="container mx-auto px-4 xl:px-8 lg:px-4">
-                    {/*SubmenuItem */}
-                    <div>
-                      <ul className="header-list flex justify-center gap-2">
-                        <li className="group/item px-6 leading-none basis-1/5">
-                          <div className="h-full flex flex-col">
-                            <p className="text-sm text-[#a4a5a7] hover:text-primary-color">
-                              Expert guidance on leveraging advanced
-                            </p>
-                            <p className="text-sm mt-5 text-[#a4a5a7] hover:text-primary-color">
-                              Expert guidance on leveraging advanced
-                            </p>
-                            <p className="text-sm mt-5 text-[#a4a5a7] hover:text-primary-color">
-                              Expert guidance on leveraging advanced
-                            </p>
-                          </div>
-                        </li>
-                        <li className="group/item bg-[#292b30] py-4 px-6 leading-none basis-1/5">
-                          <div className="h-full flex flex-col">
-                            <p className="font-medium">
-                              Custom software development
-                            </p>
-                            <p className="text-sm mt-5 text-[#a4a5a7]">
-                              Tailored software solutions and software
-                              augmentation services to meet unique business
-                              needs, drive operational efficiency, and stimulate
-                              business expansion
-                            </p>
-                            <span
-                              className="flex gap-2 mt-auto pt-[34px] text-primary-color leading-6 tracking-wide 
-                           xl:group-hover/item:text-primary-color xl:group-hover/item:gap-[17px] transition-all duration-300"
-                            >
-                              Read more
-                              <Image
-                                src="/white-arrow.svg"
-                                alt="arrow-right"
-                                width={24}
-                                height={24}
-                                className="filter-custom-orange"
-                              />
-                            </span>
-                          </div>
-                        </li>
-                        <li className="group/item bg-[#292b30] py-4 px-6 leading-none basis-1/5">
-                          <div className="h-full flex flex-col">
-                            <p className="font-medium">
-                              Dedicated development teams
-                            </p>
-                            <p className="text-sm mt-5 text-[#a4a5a7]">
-                              Dedicated development teams and professionals that
-                              work exclusively on your project and ensure
-                              top-notch tailored solutions
-                            </p>
-                            <span
-                              className="flex gap-2 mt-auto pt-[34px] text-primary-color leading-6 tracking-wide 
-                           xl:group-hover/item:text-primary-color xl:group-hover/item:gap-[17px] transition-all duration-300"
-                            >
-                              Read more
-                              <Image
-                                src="/white-arrow.svg"
-                                alt="arrow-right"
-                                width={24}
-                                height={24}
-                                className="filter-custom-orange"
-                              />
-                            </span>
-                          </div>
-                        </li>
-                        <li className="group/item bg-[#292b30] py-4 px-6 leading-none basis-1/5">
-                          <div className="h-full flex flex-col">
-                            <p className="font-medium">IT consulting</p>
-                            <p className="text-sm mt-5 text-[#a4a5a7]">
-                              Expert guidance on leveraging advanced
-                              technologies to optimize business processes, drive
-                              innovation, and achieve strategic objectives
-                            </p>
-                            <span
-                              className="flex gap-2 mt-auto pt-[34px] text-primary-color leading-6 tracking-wide 
-                           xl:group-hover/item:text-primary-color xl:group-hover/item:gap-[17px] transition-all duration-300"
-                            >
-                              Read more
-                              <Image
-                                src="/white-arrow.svg"
-                                alt="arrow-right"
-                                width={24}
-                                height={24}
-                                className="filter-custom-orange"
-                              />
-                            </span>
-                          </div>
-                        </li>
-                        <li className="group/item px-6 leading-none basis-1/5">
-                          <div className="h-full flex flex-col">
-                            <p className="text-sm text-[#a4a5a7] hover:text-primary-color">
-                              Digital transformation
-                            </p>
-                            <p className="text-sm mt-5 text-[#a4a5a7] hover:text-primary-color">
-                              Digital transformation
-                            </p>
-                            <p className="text-sm mt-5 text-[#a4a5a7] hover:text-primary-color">
-                              Digital transformation
-                            </p>
-                          </div>
-                        </li>
-                      </ul>
-                    </div>
-                  </div>
-                </div>
-              </li>
-              <li className="group leading-[88px] menu-item px-[10px]">
-                <a
-                  href="#!"
-                  className="menu_link whitespace-nowrap group-hover:text-primary-color"
-                >
-                  INDUSTRIES
-                </a>
-                {/* SubMenu */}
-                <div className="sub-menu py-7 absolute hidden group-hover:block border-t-[1px] border-[#494b50] top-[88px] left-0 right-0 bg-[#202227]">
-                  <div className="container mx-auto px-4 xl:px-8 lg:px-4">
-                    {/*SubmenuItem */}
-                    <div>
-                      <ul className="header-list flex justify-center gap-2">
-                        <li className="group/item bg-[#292b30] py-4 px-6 leading-none basis-1/5">
-                          <div className="h-full flex flex-col">
-                            <p className="font-medium">IT consulting</p>
-                            <p className="text-sm mt-5 text-[#a4a5a7]">
-                              Expert guidance on leveraging advanced
-                              technologies to optimize business processes, drive
-                              innovation, and achieve strategic objectives
-                            </p>
-                            <span
-                              className="flex gap-2 mt-auto pt-[34px] text-primary-color leading-6 tracking-wide 
-                           xl:group-hover/item:text-primary-color xl:group-hover/item:gap-[17px] transition-all duration-300"
-                            >
-                              Read more
-                              <Image
-                                src="/white-arrow.svg"
-                                alt="arrow-right"
-                                width={24}
-                                height={24}
-                                className="filter-custom-orange"
-                              />
-                            </span>
-                          </div>
-                        </li>
-                        <li className="group/item bg-[#292b30] py-4 px-6 leading-none basis-1/5">
-                          <div className="h-full flex flex-col">
-                            <p className="font-medium">
-                              Custom software development
-                            </p>
-                            <p className="text-sm mt-5 text-[#a4a5a7]">
-                              Tailored software solutions and software
-                              augmentation services to meet unique business
-                              needs, drive operational efficiency, and stimulate
-                              business expansion
-                            </p>
-                            <span
-                              className="flex gap-2 mt-auto pt-[34px] text-primary-color leading-6 tracking-wide 
-                           xl:group-hover/item:text-primary-color xl:group-hover/item:gap-[17px] transition-all duration-300"
-                            >
-                              Read more
-                              <Image
-                                src="/white-arrow.svg"
-                                alt="arrow-right"
-                                width={24}
-                                height={24}
-                                className="filter-custom-orange"
-                              />
-                            </span>
-                          </div>
-                        </li>
-                        <li className="group/item bg-[#292b30] py-4 px-6 leading-none basis-1/5">
-                          <div className="h-full flex flex-col">
-                            <p className="font-medium">
-                              Dedicated development teams
-                            </p>
-                            <p className="text-sm mt-5 text-[#a4a5a7]">
-                              Dedicated development teams and professionals that
-                              work exclusively on your project and ensure
-                              top-notch tailored solutions
-                            </p>
-                            <span
-                              className="flex gap-2 mt-auto pt-[34px] text-primary-color leading-6 tracking-wide 
-                           xl:group-hover/item:text-primary-color xl:group-hover/item:gap-[17px] transition-all duration-300"
-                            >
-                              Read more
-                              <Image
-                                src="/white-arrow.svg"
-                                alt="arrow-right"
-                                width={24}
-                                height={24}
-                                className="filter-custom-orange"
-                              />
-                            </span>
-                          </div>
-                        </li>
-                        <li className="group/item px-6 leading-none basis-1/5">
-                          <div className="h-full flex flex-col">
-                            <p className="text-sm text-[#a4a5a7] hover:text-primary-color">
-                              Expert guidance on leveraging advanced
-                            </p>
-                            <p className="text-sm mt-5 text-[#a4a5a7] hover:text-primary-color">
-                              Expert guidance on leveraging advanced
-                            </p>
-                            <p className="text-sm mt-5 text-[#a4a5a7] hover:text-primary-color">
-                              Expert guidance on leveraging advanced
-                            </p>
-                          </div>
-                        </li>
-
-                        <li className="group/item px-6 leading-none basis-1/5">
-                          <div className="h-full flex flex-col">
-                            <p className="text-sm text-[#a4a5a7] hover:text-primary-color">
-                              Digital transformation
-                            </p>
-                            <p className="text-sm mt-5 text-[#a4a5a7] hover:text-primary-color">
-                              Digital transformation
-                            </p>
-                            <p className="text-sm mt-5 text-[#a4a5a7] hover:text-primary-color">
-                              Digital transformation
-                            </p>
-                          </div>
-                        </li>
-                      </ul>
-                    </div>
-                  </div>
-                </div>
-              </li>
-              <li className="group leading-[88px] menu-item px-[10px]">
-                <a
-                  href="#!"
-                  className="menu_link whitespace-nowrap group-hover:text-primary-color"
-                >
-                  SUCCESS STORIES
-                </a>
-                {/* SubMenu */}
-                <div className="sub-menu py-7 absolute hidden group-hover:block border-t-[1px] border-[#494b50] top-[88px] left-0 right-0 bg-[#202227]">
-                  <div className="container mx-auto px-4 xl:px-8 lg:px-4">
-                    {/*SubmenuItem */}
-                    <div>
-                      <ul className="header-list flex justify-center gap-2">
-                        <li className="group/item bg-[#292b30] py-4 px-6 leading-none basis-1/5">
-                          <div className="h-full flex flex-col">
-                            <p className="font-medium">
-                              Digital transformation
-                            </p>
-                            <p className="text-sm mt-5 text-[#a4a5a7]">
-                              Digital transformation services for streamlined
-                              business processes, improved customer experiences,
-                              and enhanced operational efficiency
-                            </p>
-                            <span
-                              className="flex gap-2 mt-auto pt-[34px] text-primary-color leading-6 tracking-wide 
-                           xl:group-hover/item:text-primary-color xl:group-hover/item:gap-[17px] transition-all duration-300"
-                            >
-                              Read more
-                              <Image
-                                src="/white-arrow.svg"
-                                alt="arrow-right"
-                                width={24}
-                                height={24}
-                                className="filter-custom-orange"
-                              />
-                            </span>
-                          </div>
-                        </li>
-                        <li className="group/item bg-[#292b30] py-4 px-6 leading-none basis-1/5">
-                          <div className="h-full flex flex-col">
-                            <p className="font-medium">IT consulting</p>
-                            <p className="text-sm mt-5 text-[#a4a5a7]">
-                              Expert guidance on leveraging advanced
-                              technologies to optimize business processes, drive
-                              innovation, and achieve strategic objectives
-                            </p>
-                            <span
-                              className="flex gap-2 mt-auto pt-[34px] text-primary-color leading-6 tracking-wide 
-                           xl:group-hover/item:text-primary-color xl:group-hover/item:gap-[17px] transition-all duration-300"
-                            >
-                              Read more
-                              <Image
-                                src="/white-arrow.svg"
-                                alt="arrow-right"
-                                width={24}
-                                height={24}
-                                className="filter-custom-orange"
-                              />
-                            </span>
-                          </div>
-                        </li>
-                      </ul>
-                    </div>
-                  </div>
-                </div>
-              </li>
-              <li className="group leading-[88px] menu-item px-[10px]">
-                <a
-                  href="#!"
-                  className="menu_link whitespace-nowrap group-hover:text-primary-color"
-                >
-                  SOLUTION HUB
-                </a>
-                {/* SubMenu */}
-                <div className="sub-menu py-7 absolute hidden group-hover:block border-t-[1px] border-[#494b50] top-[88px] left-0 right-0 bg-[#202227]">
-                  <div className="container mx-auto px-4 xl:px-8 lg:px-4">
-                    {/*SubmenuItem */}
-                    <div>
-                      <ul className="header-list flex justify-center gap-2">
-                        <li className="group/item bg-[#292b30] py-4 px-6 leading-none basis-1/5">
-                          <div className="h-full flex flex-col">
-                            <p className="font-medium">
-                              Digital transformation
-                            </p>
-                            <p className="text-sm mt-5 text-[#a4a5a7]">
-                              Digital transformation services for streamlined
-                              business processes, improved customer experiences,
-                              and enhanced operational efficiency
-                            </p>
-                            <span
-                              className="flex gap-2 mt-auto pt-[34px] text-primary-color leading-6 tracking-wide 
-                           xl:group-hover/item:text-primary-color xl:group-hover/item:gap-[17px] transition-all duration-300"
-                            >
-                              Read more
-                              <Image
-                                src="/white-arrow.svg"
-                                alt="arrow-right"
-                                width={24}
-                                height={24}
-                                className="filter-custom-orange"
-                              />
-                            </span>
-                          </div>
-                        </li>
-                        <li className="group/item bg-[#292b30] py-4 px-6 leading-none basis-1/5">
-                          <div className="h-full flex flex-col">
-                            <p className="font-medium">IT consulting</p>
-                            <p className="text-sm mt-5 text-[#a4a5a7]">
-                              Expert guidance on leveraging advanced
-                              technologies to optimize business processes, drive
-                              innovation, and achieve strategic objectives
-                            </p>
-                            <span
-                              className="flex gap-2 mt-auto pt-[34px] text-primary-color leading-6 tracking-wide 
-                           xl:group-hover/item:text-primary-color xl:group-hover/item:gap-[17px] transition-all duration-300"
-                            >
-                              Read more
-                              <Image
-                                src="/white-arrow.svg"
-                                alt="arrow-right"
-                                width={24}
-                                height={24}
-                                className="filter-custom-orange"
-                              />
-                            </span>
-                          </div>
-                        </li>
-                        <li className="group/item bg-[#292b30] py-4 px-6 leading-none basis-1/5">
-                          <div className="h-full flex flex-col">
-                            <p className="font-medium">IT consulting</p>
-                            <p className="text-sm mt-5 text-[#a4a5a7]">
-                              Expert guidance on leveraging advanced
-                              technologies to optimize business processes, drive
-                              innovation, and achieve strategic objectives
-                            </p>
-                            <span
-                              className="flex gap-2 mt-auto pt-[34px] text-primary-color leading-6 tracking-wide 
-                           xl:group-hover/item:text-primary-color xl:group-hover/item:gap-[17px] transition-all duration-300"
-                            >
-                              Read more
-                              <Image
-                                src="/white-arrow.svg"
-                                alt="arrow-right"
-                                width={24}
-                                height={24}
-                                className="filter-custom-orange"
-                              />
-                            </span>
-                          </div>
-                        </li>
-                      </ul>
-                    </div>
-                  </div>
-                </div>
-              </li>
-              <li className="group leading-[88px] menu-item px-[10px]">
-                <a
-                  href="#!"
-                  className="menu_link whitespace-nowrap group-hover:text-primary-color"
-                >
-                  COMPANY
-                </a>
-
-                {/* SubMenu */}
-                <div className="sub-menu py-7 absolute hidden group-hover:block border-t-[1px] border-[#494b50] top-[88px] left-0 right-0 bg-[#202227]">
-                  <div className="container mx-auto px-4 xl:px-8 lg:px-4">
-                    {/*SubmenuItem */}
-                    <div>
-                      <ul className="header-list flex justify-center gap-2">
-                        <li className="group/item bg-[#292b30] py-4 px-6 leading-none basis-1/5">
-                          <div className="h-full flex flex-col">
-                            <p className="font-medium">
-                              Digital transformation
-                            </p>
-                            <p className="text-sm mt-5 text-[#a4a5a7]">
-                              Digital transformation services for streamlined
-                              business processes, improved customer experiences,
-                              and enhanced operational efficiency
-                            </p>
-                            <span
-                              className="flex gap-2 mt-auto pt-[34px] text-primary-color leading-6 tracking-wide 
-                           xl:group-hover/item:text-primary-color xl:group-hover/item:gap-[17px] transition-all duration-300"
-                            >
-                              Read more
-                              <Image
-                                src="/white-arrow.svg"
-                                alt="arrow-right"
-                                width={24}
-                                height={24}
-                                className="filter-custom-orange"
-                              />
-                            </span>
-                          </div>
-                        </li>
-                        <li className="group/item bg-[#292b30] py-4 px-6 leading-none basis-1/5">
-                          <div className="h-full flex flex-col">
-                            <p className="font-medium">IT consulting</p>
-                            <p className="text-sm mt-5 text-[#a4a5a7]">
-                              Expert guidance on leveraging advanced
-                              technologies to optimize business processes, drive
-                              innovation, and achieve strategic objectives
-                            </p>
-                            <span
-                              className="flex gap-2 mt-auto pt-[34px] text-primary-color leading-6 tracking-wide 
-                           xl:group-hover/item:text-primary-color xl:group-hover/item:gap-[17px] transition-all duration-300"
-                            >
-                              Read more
-                              <Image
-                                src="/white-arrow.svg"
-                                alt="arrow-right"
-                                width={24}
-                                height={24}
-                                className="filter-custom-orange"
-                              />
-                            </span>
-                          </div>
-                        </li>
-                      </ul>
-                    </div>
-                  </div>
-                </div>
-              </li>
-              <li className="group leading-[88px] menu-item px-[10px]">
-                <a
-                  href="#!"
-                  className="menu_link whitespace-nowrap group-hover:text-primary-color"
-                >
-                  INSIGHTS
-                </a>
-                {/* SubMenu */}
-                <div className="sub-menu py-7 absolute hidden group-hover:block border-t-[1px] border-[#494b50] top-[88px] left-0 right-0 bg-[#202227]">
-                  <div className="container mx-auto px-4 xl:px-8 lg:px-4">
-                    {/*SubmenuItem */}
-                    <div>
-                      <ul className="header-list flex justify-center gap-2">
-                        <li className="group/item bg-[#292b30] py-4 px-6 leading-none basis-1/5">
-                          <div className="h-full flex flex-col">
-                            <p className="font-medium">
-                              Digital transformation
-                            </p>
-                            <p className="text-sm mt-5 text-[#a4a5a7]">
-                              Digital transformation services for streamlined
-                              business processes, improved customer experiences,
-                              and enhanced operational efficiency
-                            </p>
-                            <span
-                              className="flex gap-2 mt-auto pt-[34px] text-primary-color leading-6 tracking-wide 
-                           xl:group-hover/item:text-primary-color xl:group-hover/item:gap-[17px] transition-all duration-300"
-                            >
-                              Read more
-                              <Image
-                                src="/white-arrow.svg"
-                                alt="arrow-right"
-                                width={24}
-                                height={24}
-                                className="filter-custom-orange"
-                              />
-                            </span>
-                          </div>
-                        </li>
-                        <li className="group/item bg-[#292b30] py-4 px-6 leading-none basis-1/5">
-                          <div className="h-full flex flex-col">
-                            <p className="font-medium">IT consulting</p>
-                            <p className="text-sm mt-5 text-[#a4a5a7]">
-                              Expert guidance on leveraging advanced
-                              technologies to optimize business processes, drive
-                              innovation, and achieve strategic objectives
-                            </p>
-                            <span
-                              className="flex gap-2 mt-auto pt-[34px] text-primary-color leading-6 tracking-wide 
-                           xl:group-hover/item:text-primary-color xl:group-hover/item:gap-[17px] transition-all duration-300"
-                            >
-                              Read more
-                              <Image
-                                src="/white-arrow.svg"
-                                alt="arrow-right"
-                                width={24}
-                                height={24}
-                                className="filter-custom-orange"
-                              />
-                            </span>
-                          </div>
-                        </li>
-                        <li className="group/item bg-[#292b30] py-4 px-6 leading-none basis-1/5">
-                          <div className="h-full flex flex-col">
-                            <p className="font-medium">
-                              Digital transformation
-                            </p>
-                            <p className="text-sm mt-5 text-[#a4a5a7]">
-                              Digital transformation services for streamlined
-                              business processes, improved customer experiences,
-                              and enhanced operational efficiency
-                            </p>
-                            <span
-                              className="flex gap-2 mt-auto pt-[34px] text-primary-color leading-6 tracking-wide 
-                           xl:group-hover/item:text-primary-color xl:group-hover/item:gap-[17px] transition-all duration-300"
-                            >
-                              Read more
-                              <Image
-                                src="/white-arrow.svg"
-                                alt="arrow-right"
-                                width={24}
-                                height={24}
-                                className="filter-custom-orange"
-                              />
-                            </span>
-                          </div>
-                        </li>
-                        <li className="group/item bg-[#292b30] py-4 px-6 leading-none basis-1/5">
-                          <div className="h-full flex flex-col">
-                            <p className="font-medium">IT consulting</p>
-                            <p className="text-sm mt-5 text-[#a4a5a7]">
-                              Expert guidance on leveraging advanced
-                              technologies to optimize business processes, drive
-                              innovation, and achieve strategic objectives
-                            </p>
-                            <span
-                              className="flex gap-2 mt-auto pt-[34px] text-primary-color leading-6 tracking-wide 
-                           xl:group-hover/item:text-primary-color xl:group-hover/item:gap-[17px] transition-all duration-300"
-                            >
-                              Read more
-                              <Image
-                                src="/white-arrow.svg"
-                                alt="arrow-right"
-                                width={24}
-                                height={24}
-                                className="filter-custom-orange"
-                              />
-                            </span>
-                          </div>
-                        </li>
-                      </ul>
-                    </div>
-                  </div>
-                </div>
-              </li>
-            </ul>
-          </nav>
-
+          <Nav />
           {/* Action */}
           <Button href="#!" text="CONTACT US" className="hidden md:block" />
 
           {/* Navbar Mobile */}
-          <a
-            href="#!"
+          <button
             className="w-12 h-12 flex xl:hidden justify-center items-center ml-8"
+            onClick={toggleMenu}
           >
             <Image src="/navbar.svg" alt="navbar" width={32} height={32} />
-          </a>
+          </button>
         </div>
       </div>
 
-      <div className=""></div>
+      {/* Mobile Menu - Navbar */}
+      <div
+        className={`absolute left-0 right-0 top-0 h-screen bg-white transform transition-transform duration-300 xl:hidden ${
+          isMenuOpen ? "-translate-y-0" : "-translate-y-full"
+        }`}
+      >
+        <div className="container mx-auto px-4 xl:px-8 lg:px-4">
+          <div className="flex h-[72px] xl:h-[88px] items-center">
+            {/* Logo */}
+            <div className="header-logo mr-auto">
+              <a href="#!" className="header-logo__link">
+                <Image
+                  src="/logo_dark.svg"
+                  alt="Yalantis logo"
+                  className="header-logo__img w-[116px] h-[26px]"
+                  width={0}
+                  height={0}
+                />
+              </a>
+            </div>
+            {/* Close Navbar Mobile */}
+            <a
+              href="#!"
+              className="w-12 h-12 flex xl:hidden justify-center items-center ml-8"
+              onClick={toggleMenu}
+            >
+              <Image
+                src="/close.svg"
+                alt="close"
+                className="w-8 h-8"
+                width={0}
+                height={0}
+              />
+            </a>
+          </div>
+          <div className="menu-wrap pt-[38px] flex flex-col justify-between">
+            {/* <ul className="menuList">
+              <li>
+                <div className="flex justify-between items-center py-5 tracking-wide leading-9 text-2xl uppercase">
+                  <a href="#!">SERVICES</a>
+                  <Image src="/arrow.svg" alt="" width={20} height={0} />
+                </div>
+                <div className="separate_navbar w-full h-[1px] bg-[#d2d2d3]"></div>
+
+                <div className="submenu block">
+                  <ul className="grid grid-cols-2 gap-y-3 mt-[16px] mb-[24px]">
+                    <li>
+                      <a href="">Custom software development</a>
+                    </li>
+                    <li>
+                      <a href="">Custom software development</a>
+                    </li>
+                    <li>
+                      <a href="">Custom software development</a>
+                    </li>
+                    <li>
+                      <a href="">Custom software development</a>
+                    </li>
+                    <li>
+                      <a href="">Custom software development</a>
+                    </li>
+                  </ul>
+                </div>
+              </li>
+              <li>
+                <div className="flex justify-between items-center py-5 tracking-wide leading-9 text-2xl uppercase">
+                  <a href="#!">SERVICES</a>
+                  <Image src="/arrow.svg" alt="" width={20} height={0} />
+                </div>
+                <div className="separate_navbar w-full h-[1px] bg-[#d2d2d3]"></div>
+
+                <div className="submenu block">
+                  <ul className="grid grid-cols-2 gap-y-3 mt-[16px] mb-[24px]">
+                    <li>
+                      <a href="">Custom software development</a>
+                    </li>
+                    <li>
+                      <a href="">Custom software development</a>
+                    </li>
+                    <li>
+                      <a href="">Custom software development</a>
+                    </li>
+                    <li>
+                      <a href="">Custom software development</a>
+                    </li>
+                    <li>
+                      <a href="">Custom software development</a>
+                    </li>
+                  </ul>
+                </div>
+              </li>
+            </ul> */}
+            <MenuList></MenuList>
+            <div className="flex justify-between items-center flex-col gap-[60px] md:flex-row">
+              <div className="socials flex gap-8 order-1 md:-order-none">
+                <a href="#!">
+                  <Image
+                    className="w-8 h-8"
+                    src="/linkedin.svg"
+                    alt="navbar"
+                    width={0}
+                    height={0}
+                  />
+                </a>
+                <a href="#!">
+                  <Image
+                    className="w-8 h-8"
+                    src="/github.svg"
+                    alt="navbar"
+                    width={0}
+                    height={0}
+                  />
+                </a>
+                <a href="#!">
+                  <Image
+                    className="w-8 h-8"
+                    src="/dou.svg"
+                    alt="navbar"
+                    width={0}
+                    height={0}
+                  />
+                </a>
+                <a href="#!">
+                  <Image
+                    className="w-8 h-8"
+                    src="/inst.svg"
+                    alt="navbar"
+                    width={0}
+                    height={0}
+                  />
+                </a>
+                <a href="#!">
+                  <Image
+                    className="w-8 h-8"
+                    src="/youtube.svg"
+                    alt="navbar"
+                    width={0}
+                    height={0}
+                  />
+                </a>
+              </div>
+              <Button
+                href="#!"
+                text="Contact us"
+                className="bg-primary-color text-white min-w-full md:min-w-[240px]"
+              ></Button>
+            </div>
+          </div>
+        </div>
+      </div>
     </header>
   );
 };
+
 export default Header;
