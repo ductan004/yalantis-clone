@@ -90,12 +90,11 @@ const CaseStudies = () => {
   ];
 
   const [currentSlide, setCurrentSlide] = useState(0);
-  const [totalSlides, setTotalSlides] = useState(0);
 
   return (
     <div>
-      <p>
-        {currentSlide + 1} / {totalSlides}
+      <p className="lg:hidden">
+        {currentSlide + 1} / {caseList.length}
       </p>
       {/* <div className="swiper-paginationCase mt-4 lg:hidden"></div> */}
       <div className="flex items-center justify-center mt-[11px] w-full lg:hidden">
@@ -103,7 +102,6 @@ const CaseStudies = () => {
       </div>
       <Swiper
         onInit={(swiper) => {
-          setTotalSlides(swiper.slides.length); // Get total slides
           setCurrentSlide(swiper.realIndex); // Get current slide index
         }}
         onSlideChange={(swiper) => {

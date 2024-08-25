@@ -49,13 +49,12 @@ const VideoReviews = () => {
   ];
 
   const [currentSlide, setCurrentSlide] = useState(0);
-  const [totalSlides, setTotalSlides] = useState(0);
 
   return (
     <div className="md:gap-8 xl:gap-14 relative pr-0 lg:pr-28 xl:pr-36">
       {/* <div className="swiper-pagination mt-4 lg:hidden"></div> */}
-      <p>
-        {currentSlide + 1} / {totalSlides}
+      <p className="lg:hidden">
+        {currentSlide + 1} / {reviews.length}
       </p>
       <div className="flex items-center justify-center mt-[11px] w-full lg:hidden">
         <div className="swiper-pagination-customize flex items-center justify-center w-full"></div>
@@ -63,7 +62,6 @@ const VideoReviews = () => {
 
       <Swiper
         onInit={(swiper) => {
-          setTotalSlides(swiper.slides.length); // Get total slides
           setCurrentSlide(swiper.realIndex); // Get current slide index
         }}
         onSlideChange={(swiper) => {
