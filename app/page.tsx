@@ -531,7 +531,7 @@ export default function Home() {
       </section>
 
       {/* contact-us*/}
-      <section className="contact pt-[60px] pb-32 xl:pb-0 xl:pt-[80px]">
+      <section className="contact pt-[60px] pb-[80px] md:pb-32 xl:pb-0 xl:pt-[80px]">
         <div className="container mx-auto px-4 xl:px-8">
           <div className="grid xl:grid-cols-2 gap-8">
             <div className="contact-form p-8 bg-white text-[#1c1e24]">
@@ -871,7 +871,7 @@ export default function Home() {
                         className="h-[10px] w-[10px] hidden xl:block group-hover:rotate-180 transition-transform duration-300"
                       ></Image>
                     </div>
-                    <div className="md:absolute top-8 left-0 flex py-4 xl:bg-[#272930] xl:shadow-location xl:px-[14px] xl:group-hover:opacity-100 xl:opacity-0">
+                    <div className="md:absolute top-8 left-0 group-hover:flex py-4 xl:bg-[#272930] xl:shadow-location xl:px-[14px] hidden">
                       <ul className="flex flex-col gap-2">
                         <li className="flex gap-2">
                           <Image
@@ -906,7 +906,7 @@ export default function Home() {
                         className="h-[10px] w-[10px] hidden xl:block group-hover:rotate-180 transition-transform duration-300"
                       ></Image>
                     </div>
-                    <div className="md:absolute top-8 left-0 flex py-4 xl:bg-[#272930] xl:shadow-location xl:px-[14px] xl:group-hover:opacity-100 xl:opacity-0">
+                    <div className="md:absolute top-8 left-0 group-hover:flex py-4 xl:bg-[#272930] xl:shadow-location xl:px-[14px] hidden">
                       <ul className="flex flex-col gap-2">
                         <li className="flex gap-2">
                           <Image
@@ -965,7 +965,7 @@ export default function Home() {
                         className="h-[10px] w-[10px] hidden xl:block group-hover:rotate-180 transition-transform duration-300"
                       ></Image>
                     </div>
-                    <div className="md:absolute top-8 left-0 flex py-4 xl:bg-[#272930] xl:shadow-location xl:px-[14px] xl:group-hover:opacity-100 xl:opacity-0">
+                    <div className="md:absolute top-8 left-0 group-hover:flex py-4 xl:bg-[#272930] xl:shadow-location xl:px-[14px] hidden">
                       <ul className="flex flex-col gap-2">
                         <li className="flex gap-2">
                           <Image
@@ -1000,7 +1000,7 @@ export default function Home() {
                         className="h-[10px] w-[10px] hidden xl:block group-hover:rotate-180 transition-transform duration-300"
                       ></Image>
                     </div>
-                    <div className="md:absolute top-8 left-0 flex py-4 xl:bg-[#272930] xl:shadow-location xl:px-[14px] xl:group-hover:opacity-100 xl:opacity-0">
+                    <div className="md:absolute top-8 left-0 group-hover:flex py-4 xl:bg-[#272930] xl:shadow-location xl:px-[14px] hidden">
                       <ul className="flex flex-col gap-2">
                         <li className="flex gap-2">
                           <Image

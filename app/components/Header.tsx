@@ -5,6 +5,7 @@ import Button from "./Button";
 import { useState } from "react";
 import Nav from "./Nav";
 import MenuList from "./MenuList";
+import Socials from "./Socials";
 
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -80,111 +81,9 @@ const Header = () => {
             </a>
           </div>
           <div className="menu-wrap pt-[38px] flex flex-col justify-between">
-            {/* <ul className="menuList">
-              <li>
-                <div className="flex justify-between items-center py-5 tracking-wide leading-9 text-2xl uppercase">
-                  <a href="#!">SERVICES</a>
-                  <Image src="/arrow.svg" alt="" width={20} height={0} />
-                </div>
-                <div className="separate_navbar w-full h-[1px] bg-[#d2d2d3]"></div>
-
-                <div className="submenu block">
-                  <ul className="grid grid-cols-2 gap-y-3 mt-[16px] mb-[24px]">
-                    <li>
-                      <a href="">Custom software development</a>
-                    </li>
-                    <li>
-                      <a href="">Custom software development</a>
-                    </li>
-                    <li>
-                      <a href="">Custom software development</a>
-                    </li>
-                    <li>
-                      <a href="">Custom software development</a>
-                    </li>
-                    <li>
-                      <a href="">Custom software development</a>
-                    </li>
-                  </ul>
-                </div>
-              </li>
-              <li>
-                <div className="flex justify-between items-center py-5 tracking-wide leading-9 text-2xl uppercase">
-                  <a href="#!">SERVICES</a>
-                  <Image src="/arrow.svg" alt="" width={20} height={0} />
-                </div>
-                <div className="separate_navbar w-full h-[1px] bg-[#d2d2d3]"></div>
-
-                <div className="submenu block">
-                  <ul className="grid grid-cols-2 gap-y-3 mt-[16px] mb-[24px]">
-                    <li>
-                      <a href="">Custom software development</a>
-                    </li>
-                    <li>
-                      <a href="">Custom software development</a>
-                    </li>
-                    <li>
-                      <a href="">Custom software development</a>
-                    </li>
-                    <li>
-                      <a href="">Custom software development</a>
-                    </li>
-                    <li>
-                      <a href="">Custom software development</a>
-                    </li>
-                  </ul>
-                </div>
-              </li>
-            </ul> */}
             <MenuList></MenuList>
             <div className="flex justify-between items-center flex-col gap-[60px] md:flex-row">
-              <div className="socials flex gap-8 order-1 md:-order-none">
-                <a href="#!">
-                  <Image
-                    className="w-8 h-8"
-                    src="/linkedin.svg"
-                    alt="navbar"
-                    width={0}
-                    height={0}
-                  />
-                </a>
-                <a href="#!">
-                  <Image
-                    className="w-8 h-8"
-                    src="/github.svg"
-                    alt="navbar"
-                    width={0}
-                    height={0}
-                  />
-                </a>
-                <a href="#!">
-                  <Image
-                    className="w-8 h-8"
-                    src="/dou.svg"
-                    alt="navbar"
-                    width={0}
-                    height={0}
-                  />
-                </a>
-                <a href="#!">
-                  <Image
-                    className="w-8 h-8"
-                    src="/inst.svg"
-                    alt="navbar"
-                    width={0}
-                    height={0}
-                  />
-                </a>
-                <a href="#!">
-                  <Image
-                    className="w-8 h-8"
-                    src="/youtube.svg"
-                    alt="navbar"
-                    width={0}
-                    height={0}
-                  />
-                </a>
-              </div>
+              <Socials className="md:-order-none order-1"></Socials>
               <Button
                 href="#!"
                 text="Contact us"

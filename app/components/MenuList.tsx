@@ -74,7 +74,7 @@ const menuItems = [
   },
 ];
 
-const MenuList = () => {
+const MenuList = ({ className = "", icon = "" }) => {
   const [openIndex, setOpenIndex] = useState<number | null>(null);
 
   const toggleSubmenu = (index: number) => {
@@ -82,7 +82,7 @@ const MenuList = () => {
   };
 
   return (
-    <ul className="menuList">
+    <ul className={`menuList ${className}`}>
       {menuItems.map((item, index) => (
         <li key={index}>
           <div
@@ -95,7 +95,7 @@ const MenuList = () => {
               alt=""
               width={20}
               height={0}
-              className={`${
+              className={`${icon} ${
                 openIndex === index ? "rotate-180" : ""
               } transition-all duration-300`}
             />
